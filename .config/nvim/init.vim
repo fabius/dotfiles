@@ -6,6 +6,7 @@
 "coc-rust-analyzer
 "coc-python
 "coc-json
+"coc-yaml
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'preservim/nerdtree'
 Plug 'rust-lang/rust.vim'
