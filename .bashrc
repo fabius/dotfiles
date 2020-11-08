@@ -124,4 +124,5 @@ alias fup="sudo sh -c 'apt update && apt list --upgradeable && apt full-upgrade 
 alias winboot="sudo grub-reboot 2 && systemctl reboot"
 alias code="flatpak run com.visualstudio.code"
 alias tud="tilt up --legacy=true;tilt down"
-alias dotfiles='/usr/bin/git --git-dir=/home/fabian/.dotfiles/ --work-tree=/home/fabian'
+alias dotfiles="/usr/bin/git --git-dir=/home/fabian/.dotfiles/ --work-tree=/home/fabian"
+alias dotfiles-ls="dotfiles ls-tree --full-tree -r HEAD"
