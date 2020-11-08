@@ -114,6 +114,10 @@ fi
 
 ###################################################################################################
 
+# gtk
+alias dark="gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark"
+alias light="gsettings set org.gnome.desktop.interface gtk-theme Adwaita"
+
 # k8s
 export KUBEDEV_KUBECONFIG="default"
 source <(helm completion bash)
