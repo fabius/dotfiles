@@ -25,6 +25,7 @@ highlight ColorColumn ctermbg=darkgrey guibg=darkgrey
 
 " nerdtree
 nmap <F7> :NERDTreeToggle<CR>
+let NERDTreeShowHidden = 1
 
 " tagbar
 nmap <F8> :TagbarToggle<CR>
