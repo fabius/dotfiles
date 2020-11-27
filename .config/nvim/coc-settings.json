@@ -4,6 +4,7 @@
     "coc.preferences.extensionUpdateCheck": "daily",
     "coc.preferences.formatOnSaveFiletypes": ["python"],
     "python.formatting.provider": "autopep8",
-    "python.formatting.autopep8Path": "/usr/bin/autopep8"
+    "python.formatting.autopep8Path": "/usr/bin/autopep8",
+    "python.linting.pylintPath": "/usr/bin/pylint"
 }
 

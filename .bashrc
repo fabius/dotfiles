@@ -121,6 +121,8 @@ alias light="gsettings set org.gnome.desktop.interface gtk-theme Adwaita"
 # k8s
 export KUBEDEV_KUBECONFIG="default"
 source <(helm completion bash)
+source <(minikube completion bash)
+source <(skaffold completion bash)
 
 # aliases
 alias fup="sudo sh -c 'apt update && apt list --upgradeable && apt full-upgrade &&
