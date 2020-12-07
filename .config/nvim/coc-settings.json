@@ -2,9 +2,17 @@
     "python.jediPath": "/usr/lib/python3/dist-packages",
     "python.linting.flake8Path": "/usr/bin/flake8",
     "coc.preferences.extensionUpdateCheck": "daily",
-    "coc.preferences.formatOnSaveFiletypes": ["python"],
+    "coc.preferences.formatOnSaveFiletypes": [
+        "python",
+        "vue",
+        "css",
+        "markdown",
+        "html",
+        "javascript",
+        "json",
+        "yaml"
+    ],
     "python.formatting.provider": "autopep8",
     "python.formatting.autopep8Path": "/usr/bin/autopep8",
     "python.linting.pylintPath": "/usr/bin/pylint"
 }
-

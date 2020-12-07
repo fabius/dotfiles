@@ -2,11 +2,8 @@
 call plug#begin('~/.local/share/nvim/plugged')
     Plug 'preservim/nerdtree'
     Plug 'rust-lang/rust.vim'
+    "coc-rust-analyzer coc-python coc-json coc-yaml coc-prettier coc-vetur coc-tsserver
     Plug 'neoclide/coc.nvim'
-        "coc-rust-analyzer
-        "coc-python
-        "coc-json
-        "coc-yaml
     Plug 'preservim/tagbar'
     Plug 'vim-syntastic/syntastic'
 call plug#end()

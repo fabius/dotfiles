@@ -58,7 +58,6 @@ alias code="flatpak run com.visualstudio.code"
 alias dotfiles="/usr/bin/git --git-dir=/home/fabian/.dotfiles/ --work-tree=/home/fabian"
 alias dotfiles-ls="dotfiles ls-tree --full-tree -r HEAD"
 
-
 # zsh options
 bindkey ";5D" backward-word
 bindkey ";5C" forward-word
