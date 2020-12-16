@@ -1,18 +1,22 @@
 {
-    "python.jediPath": "/usr/lib/python3/dist-packages",
-    "python.linting.flake8Path": "/usr/bin/flake8",
-    "coc.preferences.extensionUpdateCheck": "daily",
-    "coc.preferences.formatOnSaveFiletypes": [
-        "python",
-        "vue",
-        "css",
-        "markdown",
-        "html",
-        "javascript",
-        "json",
-        "yaml"
-    ],
-    "python.formatting.provider": "autopep8",
-    "python.formatting.autopep8Path": "/usr/bin/autopep8",
-    "python.linting.pylintPath": "/usr/bin/pylint"
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "python",
+    "javascript",
+    "css",
+    "html",
+    "vue",
+    "svelte",
+    "markdown",
+    "json",
+    "yaml",
+    "toml"
+  ],
+  "python.pythonPath": "/usr/local/bin/python3",
+  "python.poetryPath": "/usr/local/bin/poetry",
+  "python.pipenvPath": "/usr/local/bin/pipenv",
+  "python.linting.pylintPath": "/usr/local/bin/pylint",
+  "python.formatting.yapfPath": "/usr/local/bin/yapf",
+  "python.formatting.provider": "yapf",
+  "explorer.file.showHiddenFiles": true
 }

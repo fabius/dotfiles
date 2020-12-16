@@ -1,12 +1,43 @@
+set encoding=utf-8
+
 " vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
-    Plug 'preservim/nerdtree'
     Plug 'rust-lang/rust.vim'
-    "coc-rust-analyzer coc-python coc-json coc-yaml coc-prettier coc-vetur coc-tsserver
     Plug 'neoclide/coc.nvim'
-    Plug 'preservim/tagbar'
+    Plug 'liuchengxu/vista.vim'
+    Plug 'evanleck/vim-svelte'
     Plug 'vim-syntastic/syntastic'
+    Plug 'tomtom/tcomment_vim'
+    Plug 'junegunn/fzf.vim'
+    Plug 'tpope/vim-fugitive'
+    Plug 'vim-airline/vim-airline'
 call plug#end()
+
+" coc extensions
+let g:coc_global_extensions = [
+    \"coc-css",
+    \"coc-cssmodules",
+    \"coc-explorer",
+    \"coc-git",
+    \"coc-go",
+    \"coc-graphql",
+    \"coc-html",
+    \"coc-json",
+    \"coc-markdownlint",
+    \"coc-prettier",
+    \"coc-python",
+    \"coc-rust-analyzer",
+    \"coc-snippets",
+    \"coc-sourcekit",
+    \"coc-sql",
+    \"coc-svelte",
+    \"coc-tabnine",
+    \"coc-texlab",
+    \"coc-tsserver",
+    \"coc-vetur",
+    \"coc-xml",
+    \"coc-yaml",
+\]
 
 " display line numbering
 set number
@@ -19,19 +50,34 @@ set shiftwidth=4
 
 " highlight column #100
 set colorcolumn=100
-highlight ColorColumn ctermbg=darkgrey guibg=darkgrey
+highlight ColorColumn ctermbg=8
 
 " highlight leading & trailing whitespaces
 set list
 set listchars
 
-" nerdtree
-nmap <F7> :NERDTreeToggle<CR>
-let NERDTreeShowHidden = 1
+" airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
-" tagbar
-nmap <F8> :TagbarToggle<CR>
+" coc-explorer
+nmap <F7> :CocCommand explorer<CR>
+
+" fzf
+set rtp+=/usr/local/opt/fzf
+nmap <F5> :History<CR>
+nmap <F6> :Files<CR>
+
+" vista
+nmap <F8> :Vista!!<CR>
+let g:vista#renderer#enable_icon = 1
+let g:vista_default_executive = 'coc'
+
+" syntax highlighting
+syntax on
 
 " rust
 let g:rustfmt_autosave = 1
-syntax on
+
+" python
+let g:python3_host_prog = "/usr/local/bin/python3"
