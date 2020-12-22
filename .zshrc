@@ -16,7 +16,7 @@ mkdir -p ~/.zfunctions
 fpath=($fpath "${HOME}/.zfunctions")
 
 # fzf options
-export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!.git'"
+export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!.git' -g '!node_modules'"
 export FZF_DEFAULT_OPTS="-i"
 
 # completions

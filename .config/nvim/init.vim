@@ -20,7 +20,6 @@ let g:coc_global_extensions = [
     \"coc-explorer",
     \"coc-git",
     \"coc-go",
-    \"coc-graphql",
     \"coc-html",
     \"coc-json",
     \"coc-markdownlint",
@@ -38,6 +37,7 @@ let g:coc_global_extensions = [
     \"coc-xml",
     \"coc-yaml",
 \]
+    " \"coc-graphql",
 
 " display line numbering
 set number
