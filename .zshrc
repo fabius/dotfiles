@@ -45,4 +45,4 @@ alias upgrade="echo updating pip packages && pip3 install --upgrade pynvim &&\
     echo && echo updating vim-plug && nvim --headless +PlugUpdate +PlugUpgrade +qa &&\
     echo && echo && echo updating brew && brew update &&\
     brew upgrade"
-alias x86="/usr/bin/arch -x86_64 /bin/zsh"
+alias x86="/usr/bin/arch -x86_64"

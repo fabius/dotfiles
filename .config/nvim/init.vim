@@ -2,15 +2,16 @@ set encoding=utf-8
 
 " vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
-    Plug 'rust-lang/rust.vim'
-    Plug 'neoclide/coc.nvim'
-    Plug 'liuchengxu/vista.vim'
-    Plug 'evanleck/vim-svelte'
-    Plug 'vim-syntastic/syntastic'
-    Plug 'tomtom/tcomment_vim'
+    Plug 'christoomey/vim-tmux-navigator'
     Plug 'junegunn/fzf.vim'
+    Plug 'leafOfTree/vim-svelte-plugin'
+    Plug 'liuchengxu/vista.vim'
+    Plug 'neoclide/coc.nvim'
+    Plug 'rust-lang/rust.vim'
+    Plug 'tomtom/tcomment_vim'
     Plug 'tpope/vim-fugitive'
     Plug 'vim-airline/vim-airline'
+    Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 " coc extensions
@@ -60,6 +61,10 @@ set listchars
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
+" tab through completions
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
 " coc-explorer
 nmap <F7> :CocCommand explorer<CR>
 
@@ -75,9 +80,6 @@ let g:vista_default_executive = 'coc'
 
 " syntax highlighting
 syntax on
-
-" rust
-let g:rustfmt_autosave = 1
 
 " python
 let g:python3_host_prog = "/usr/local/bin/python3"
