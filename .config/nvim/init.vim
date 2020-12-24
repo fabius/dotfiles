@@ -2,7 +2,6 @@ set encoding=utf-8
 
 " vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
-    Plug 'christoomey/vim-tmux-navigator'
     Plug 'junegunn/fzf.vim'
     Plug 'leafOfTree/vim-svelte-plugin'
     Plug 'liuchengxu/vista.vim'
