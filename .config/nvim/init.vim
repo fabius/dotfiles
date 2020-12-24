@@ -1,10 +1,9 @@
-set encoding=utf-8
-
 " vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'leafOfTree/vim-svelte-plugin'
     Plug 'liuchengxu/vista.vim'
+    Plug 'morhetz/gruvbox'
     Plug 'neoclide/coc.nvim'
     Plug 'rust-lang/rust.vim'
     Plug 'tomtom/tcomment_vim'
@@ -77,8 +76,10 @@ nmap <F8> :Vista!!<CR>
 let g:vista#renderer#enable_icon = 1
 let g:vista_default_executive = 'coc'
 
-" syntax highlighting
+" display
 syntax on
+colorscheme gruvbox
+set encoding=utf-8
 
 " python
 let g:python3_host_prog = "/usr/local/bin/python3"
