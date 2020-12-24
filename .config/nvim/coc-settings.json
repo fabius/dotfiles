@@ -23,5 +23,6 @@
   "python.formatting.yapfPath": "/usr/local/bin/yapf",
   "python.formatting.provider": "yapf",
   "explorer.file.showHiddenFiles": true,
-  "rust-analyzer.serverPath": "/usr/local/bin/rust-analyzer"
+  "rust-analyzer.serverPath": "/usr/local/bin/rust-analyzer",
+  "xml.java.home": "/usr/local/opt/java"
 }
