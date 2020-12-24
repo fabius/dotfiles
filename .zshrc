@@ -1,4 +1,5 @@
 export EDITOR=$(which nvim)
+export CLICOLOR=1
 unsetopt NOMATCH
 setopt histignorealldups
 setopt globdots

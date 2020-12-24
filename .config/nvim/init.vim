@@ -5,6 +5,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'liuchengxu/vista.vim'
     Plug 'morhetz/gruvbox'
     Plug 'neoclide/coc.nvim'
+    Plug 'rafi/awesome-vim-colorschemes'
     Plug 'rust-lang/rust.vim'
     Plug 'tomtom/tcomment_vim'
     Plug 'tpope/vim-fugitive'
