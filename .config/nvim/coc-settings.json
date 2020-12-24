@@ -22,5 +22,6 @@
   "python.linting.pylintPath": "/usr/local/bin/pylint",
   "python.formatting.yapfPath": "/usr/local/bin/yapf",
   "python.formatting.provider": "yapf",
-  "explorer.file.showHiddenFiles": true
+  "explorer.file.showHiddenFiles": true,
+  "rust-analyzer.serverPath": "/usr/local/bin/rust-analyzer"
 }
