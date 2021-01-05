@@ -6,6 +6,8 @@ setopt globdots
 zstyle ':completion:*' ignore-parents parent pwd
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' menu select
+# search history inside tmux sessions
+bindkey '^R' history-incremental-search-backward
 
 # keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -15,6 +17,7 @@ HISTFILE=~/.zsh_history
 # folder for custom functions
 mkdir -p ~/.zfunctions
 fpath=($fpath "${HOME}/.zfunctions")
+fpath=($fpath "/usr/local/share/zsh/site-functions")
 
 # fzf options
 export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!.git' -g '!node_modules'"
@@ -24,14 +27,8 @@ export FZF_DEFAULT_OPTS="-i"
 ## rust
 rustup completions zsh > ~/.zfunctions/_rustup
 rustup completions zsh cargo > ~/.zfunctions/_cargo
-## python
-pip3 completion --zsh > ~/.zfunctions/_pip3
-poetry completions zsh > ~/.zfunctions/_poetry
 ## web development
 npm completion > ~/.zfunctions/_npm
-## k8s
-helm completion zsh > ~/.zfunctions/_helm
-kubectl completion zsh > ~/.zfunctions/_kubectl
 
 # use modern completion system
 autoload -Uz compinit
