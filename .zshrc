@@ -1,5 +1,6 @@
+export VISUAL=$(which nvim)
 export EDITOR=$(which nvim)
-export TERMINFO=/Users/fabian/.terminfo
+export TERMINFO=$HOME/.terminfo
 export CLICOLOR=1
 unsetopt NOMATCH
 setopt histignorealldups
@@ -9,6 +10,8 @@ zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' menu select
 # search history inside tmux sessions
 bindkey '^R' history-incremental-search-backward
+# disable vi mode
+set -o emacs
 
 # keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -18,7 +21,8 @@ HISTFILE=~/.zsh_history
 # folder for custom functions
 mkdir -p ~/.zfunctions
 fpath=($fpath "${HOME}/.zfunctions")
-fpath=($fpath "/usr/local/share/zsh/site-functions")
+fpath=($fpath "/opt/local/share/zsh/site-functions")
+fpath=($fpath "/opt/homebrew/share/zsh/site-functions")
 
 # fzf options
 export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!.git' -g '!node_modules'"
@@ -39,9 +43,14 @@ compinit
 eval "$(starship init zsh)"
 
 # update packages not managed by homebrew
-alias upgrade="echo updating pip packages && pip3 install --upgrade pynvim &&\
+alias upgrade=" \
+    sudo port selfupdate && sudo port upgrade outdated &&\
     echo && echo updating rust && rustup update &&\
+    echo && echo && echo updating brew && brew update && brew upgrade &&\
     echo && echo updating vim-plug && nvim --headless +PlugUpdate +PlugUpgrade +qa &&\
-    echo && echo && echo updating brew && brew update &&\
-    brew upgrade"
-alias x86="/usr/bin/arch -x86_64"
+    echo && echo && /opt/homebrew/bin/pip3 install -U pynvim"
+
+export GEM_HOME=~/.gem
+
+alias ls="exa -aF"
+

@@ -1,5 +1,11 @@
 {
   "coc.preferences.extensionUpdateCheck": "daily",
+  "toml.formatter.compactArrays": true,
+  "toml.formatter.indentTables": true,
+  "toml.formatter.arrayAutoExpand": true,
+  "toml.formatter.arrayAutoCollapse": true,
+  "toml.formatter.arrayTrailingComma": true,
+  "toml.formatter.compactInlineTables": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "go",
@@ -16,13 +22,6 @@
     "xml",
     "yaml"
   ],
-  "python.pythonPath": "/usr/local/bin/python3",
-  "python.poetryPath": "/usr/local/bin/poetry",
-  "python.pipenvPath": "/usr/local/bin/pipenv",
-  "python.linting.pylintPath": "/usr/local/bin/pylint",
-  "python.formatting.yapfPath": "/usr/local/bin/yapf",
-  "python.formatting.provider": "yapf",
   "explorer.file.showHiddenFiles": true,
-  "rust-analyzer.serverPath": "/usr/local/bin/rust-analyzer",
-  "xml.java.home": "/usr/local/opt/java"
+  "rust-analyzer.server.path": "/opt/homebrew/bin/rust-analyzer"
 }
